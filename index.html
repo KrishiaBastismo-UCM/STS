@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aspects of Gene Therapy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- correct background div (class matches CSS) -->
+  <div class="bg-gif"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+      <div class="logo">GeneTherapy</div>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+      <div class="container">
+          <h1 class="title">Aspects of Gene Therapy</h1>
+
+          <div class="slides">
+              <div class="slide active">
+                  <h2>Introduction</h2>
+                  <img src="img/Gene.jpg.jpg" alt="Gene Therapy" class="image">
+                  <p>Gene therapy modifies genes inside the body to treat or cure diseases. It aims to fix genetic problems at their root cause.</p>
+              </div>
+              <div class="slide">
+                  <h2>Gene Replacement</h2>
+                  <img src="img/gene3.jpg.jpg" alt="Gene Replacement" class="image">
+                  <p>Gene replacement introduces a healthy version of a faulty gene to restore function.</p>
+              </div>
+              <div class="slide">
+                  <h2>Gene Silencing</h2>
+                  <img src="img/gene4.jpg.jpg" alt="Gene Silencing" class="image">
+                  <p>Gene silencing turns off harmful genes to prevent diseases from developing.</p>
+              </div>
+              <div class="slide">
+                  <h2>Delivery Methods</h2>
+                  <img src="img/gene5.jpg" alt="Vectors" class="image">
+                  <p>Gene therapy uses viral and non-viral vectors to deliver therapeutic genes.</p>
+              </div>
+          </div>
+
+         <div class="buttons">
+    <button id="prev">◀ Previous</button>
+    <button id="next">Next ▶</button>
+</div>
+
+<script>
+    // Example: navigating through slides or sections
+    let currentSlide = 0; // starting slide index
+    const slides = document.querySelectorAll('.slide'); // all elements with class 'slide'
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    // Initially show the first slide
+    showSlide(currentSlide);
+
+    // Button functionality
+    document.getElementById('prev').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
+</script>
+
+</body>
+</html>

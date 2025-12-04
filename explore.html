@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPLORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo">GeneTherapy</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav> 
+
+    <!-- ASPECTS OF GENE THERAPY -->
+<section class="gene-therapy" style="max-width:800px; margin:auto; padding:20px; color:white;">
+    <h1 class="section-title" style="text-align:center; color:#7dd3fc;">Aspects of Gene Therapy</h1>
+    <p style="text-align:center;">
+        Gene therapy is a technique that aims to treat or prevent diseases by modifying a person’s genes. Click each topic below to learn more:
+    </p>
+
+    <!-- Collapsible Topics -->
+    <button class="collapsible">Gene Delivery Methods</button>
+    <div class="content">
+        <p>Genes need to be delivered into the target cells safely and effectively. Delivery can be achieved using vectors:</p>
+        <ul>
+            <li><strong>Viral Vectors:</strong> Viruses such as adenoviruses, lentiviruses, or retroviruses are modified to carry therapeutic genes without causing disease.</li>
+            <li><strong>Non-Viral Vectors:</strong> Methods like liposomes, nanoparticles, or physical techniques (e.g., electroporation) deliver DNA/RNA without using viruses.</li>
+        </ul>
+        <p>Efficient delivery ensures that the therapeutic gene reaches the intended cells and functions correctly.</p>
+    </div>
+
+    <button class="collapsible">Types of Gene Therapy</button>
+    <div class="content">
+        <p>Gene therapy can be classified based on which cells are targeted:</p>
+        <ul>
+            <li><strong>Somatic Gene Therapy:</strong> Alters genes in non-reproductive cells. Changes affect only the patient and are not inherited.</li>
+            <li><strong>Germline Gene Therapy:</strong> Alters genes in reproductive cells or embryos. Changes can be passed to future generations but are ethically debated.</li>
+        </ul>
+        <p>Choosing the right type depends on the disease, ethical considerations, and treatment goals.</p>
+    </div>
+
+    <button class="collapsible">Gene Silencing and Editing</button>
+    <div class="content">
+        <p>Gene silencing and editing help regulate or correct defective genes:</p>
+        <ul>
+            <li><strong>Gene Silencing:</strong> Techniques like RNA interference (RNAi) can turn off harmful genes that cause disease.</li>
+            <li><strong>Gene Editing:</strong> Tools like CRISPR-Cas9, TALENs, or ZFNs allow precise modification of DNA sequences to fix genetic defects.</li>
+        </ul>
+        <p>These methods are crucial for targeting diseases at the genetic level rather than just treating symptoms.</p>
+    </div>
+
+    <button class="collapsible">Therapeutic Applications</button>
+    <div class="content">
+        <p>Gene therapy has a wide range of potential applications:</p>
+        <ul>
+            <li>Treating <strong>genetic disorders</strong> such as cystic fibrosis, hemophilia, or muscular dystrophy.</li>
+            <li>Targeting <strong>cancers</strong> by modifying immune cells or tumor suppressor genes.</li>
+            <li>Combating certain <strong>viral infections</strong> by introducing antiviral genes or immune system boosters.</li>
+            <li>Developing <strong>personalized medicine</strong> strategies tailored to a patient’s genetic profile.</li>
+        </ul>
+        <p>Ongoing research continues to expand the potential diseases that gene therapy can treat.</p>
+    </div>
+
+    <button class="collapsible">Safety and Ethical Considerations</button>
+    <div class="content">
+        <p>While promising, gene therapy involves risks and ethical questions:</p>
+        <ul>
+            <li><strong>Safety Risks:</strong> Immune reactions, off-target effects, insertional mutagenesis, or long-term complications.</li>
+            <li><strong>Ethical Issues:</strong> Germline modifications, accessibility, consent, and potential misuse for enhancement rather than therapy.</li>
+            <li><strong>Regulatory Oversight:</strong> Clinical trials and approvals ensure treatments are safe and effective before widespread use.</li>
+        </ul>
+        <p>Balancing innovation with safety and ethics is essential for responsible gene therapy research.</p>
+    </div>
+</section>
+
+
+<!-- JavaScript for collapsible functionality -->
+<script>
+    // Select all collapsible buttons
+    const coll = document.getElementsByClassName("collapsible");
+    
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active"); // Toggle active class for styling
+
+            const content = this.nextElementSibling;
+            
+            // Toggle maxHeight to show/hide content
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+<style>
+    /* Collapsible button styling */
+    .collapsible {
+        background-color: #1e293b;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .collapsible:hover {
+        background-color: #334155;
+    }
+
+    .collapsible.active {
+        background-color: #0f172a;
+    }
+
+    /* Collapsible content */
+    .content {
+        background-color: #0f172a;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0 15px;
+        transition: max-height 0.3s ease-out;
+        border-left: 3px solid #7dd3fc;
+        margin-bottom: 10px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .content p {
+        margin: 10px 0;
+    }
+</style>
+
+
+ <!-- START QUIZ BUTTON -->
+<div style="text-align: center; margin: 40px 0;">
+    <button id="startQuizBtn">Start Quiz</button>
+</div>
+
+<!-- QUIZ SECTION (hidden by default) -->
+<section class="quiz-section" id="quizSection" style="display:none; max-width:600px; margin:auto; padding:20px; border:2px solid #7dd3fc; border-radius:10px; background-color: rgba(0,0,0,0.6); color:white;">
+    <h2 style="text-align:center; color:#7dd3fc;">Test Your Knowledge</h2>
+
+    <form id="geneQuiz">
+        <!-- Question 1 -->
+        <div class="quiz-question" style="margin-bottom:15px;">
+            <p>1. What is the main goal of gene therapy?</p>
+            <label><input type="radio" name="q1" value="correct"> To treat or prevent diseases by modifying genes</label><br>
+            <label><input type="radio" name="q1" value="wrong"> To create new diseases</label><br>
+            <label><input type="radio" name="q1" value="wrong"> To remove all genes from a cell</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question" style="margin-bottom:15px;">
+            <p>2. What are viral vectors used for in gene therapy?</p>
+            <label><input type="radio" name="q2" value="correct"> To deliver therapeutic genes into target cells</label><br>
+            <label><input type="radio" name="q2" value="wrong"> To destroy harmful cells</label><br>
+            <label><input type="radio" name="q2" value="wrong"> To edit proteins directly</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question" style="margin-bottom:15px;">
+            <p>3. Which gene therapy targets reproductive cells?</p>
+            <label><input type="radio" name="q3" value="correct"> Germline gene therapy</label><br>
+            <label><input type="radio" name="q3" value="wrong"> Somatic gene therapy</label><br>
+            <label><input type="radio" name="q3" value="wrong"> Protein therapy</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question" style="margin-bottom:15px;">
+            <p>4. What tool allows precise gene editing?</p>
+            <label><input type="radio" name="q4" value="correct"> CRISPR-Cas9</label><br>
+            <label><input type="radio" name="q4" value="wrong"> RNA polymerase</label><br>
+            <label><input type="radio" name="q4" value="wrong"> PCR machine</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-question" style="margin-bottom:15px;">
+            <p>5. Somatic gene therapy affects:</p>
+            <label><input type="radio" name="q5" value="correct"> Non-reproductive cells</label><br>
+            <label><input type="radio" name="q5" value="wrong"> Reproductive cells</label><br>
+            <label><input type="radio" name="q5" value="wrong"> All body cells permanently</label>
+        </div>
+
+        <button type="button" id="submitQuizBtn">Submit Answers</button>
+    </form>
+
+    <p id="quizResult" style="text-align:center; font-weight:bold; margin-top:15px;"></p>
+</section>
+
+<script>
+    const startBtn = document.getElementById('startQuizBtn');
+    const quizSection = document.getElementById('quizSection');
+    const quizForm = document.getElementById('geneQuiz');
+    const result = document.getElementById('quizResult');
+
+    // Show quiz when start button clicked
+    startBtn.addEventListener('click', () => {
+        quizSection.style.display = 'block';
+        startBtn.style.display = 'none';
+        result.innerText = ''; // Reset result
+        // Reset previous answers
+        quizForm.reset();
+        const labels = quizForm.querySelectorAll('label');
+        labels.forEach(label => label.style.backgroundColor = '');
+    });
+
+    // Check quiz answers
+    document.getElementById('submitQuizBtn').addEventListener('click', () => {
+        const totalQuestions = 5;
+        let score = 0;
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            const options = quizForm['q' + i];
+            for (let opt of options) {
+                const parentLabel = opt.parentElement;
+                parentLabel.style.backgroundColor = ''; // reset
+
+                if (opt.checked) {
+                    if (opt.value === 'correct') {
+                        score++;
+                        parentLabel.style.backgroundColor = 'rgba(0,128,0,0.3)';
+                    } else {
+                        parentLabel.style.backgroundColor = 'rgba(255,0,0,0.3)';
+                    }
+                }
+            }
+        }
+
+        result.innerText = `You scored ${score} out of ${totalQuestions}`;
+
+        // Auto-reset quiz after 5 seconds
+        setTimeout(() => {
+            quizSection.style.display = 'none';
+            startBtn.style.display = 'inline-block';
+            quizForm.reset();
+            const labels = quizForm.querySelectorAll('label');
+            labels.forEach(label => label.style.backgroundColor = '');
+            result.innerText = '';
+        }, 1000); // 1000ms = 1 seconds
+    });
+</script>
+
+</script>
+
+</section>
+
+</body>
+</html>

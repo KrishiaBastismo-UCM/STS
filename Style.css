@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 24px;
+    color: #7dd3fc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #7dd3fc;
+}
+
+/* MAIN CONTENT */
+.container {
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #7dd3fc;
+}
+
+.slides {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    height: 420px;
+}
+
+.slide {
+    display: none;
+    background: rgba(0, 0, 0, 0.555);
+    padding: 30px;
+    border-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slide.active {
+    display: block;
+    animation: fade 0.6s ease;
+}
+
+.image {
+    width: 60%;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    background: #7dd3fc;
+    color: black;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bae6fd;
+}
+
+/* SECTIONS */
+.section-block {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* BODY CENTERING */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+
+    /* FLEX CENTERING */
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    height: 100vh;            /* full viewport height */
+}
+
+/* BODY CENTERING */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+
+    display: flex;
+    flex-direction: column;  /* stack title + team vertically */
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    height: 100vh;           /* full viewport height */
+}
+
+/* ABOUT US TITLE */
+.about-title {
+    font-size: 48px;
+    color: #7dd3fc;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ABOUT US TEXT */
+.about-text {
+    max-width: 700px;     /* slightly narrower for compact look */
+    text-align: center;
+    font-size: 16px;      /* smaller font */
+    line-height: 1.4;     /* tighter spacing */
+    color: #ffffffcc;
+    margin-bottom: 30px;  /* less space before team section */
+    padding: 0 15px;
+}
+
+/* TEAM MEMBERS LAYOUT */
+.team-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.6);
+}
+
+.member-name {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #7dd3fc; 
+    font-weight: bold;
+}
+
+.bg-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gif.gif') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* puts GIF behind your content */
+    opacity: 0.9; /* adjust if too bright */
+}
+
+
+.gene-therapy {
+    max-width: 800px;
+    margin: 120px auto 60px auto;
+    padding: 0 20px;
+    color: #ffffffcc;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #7dd3fc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Collapsible buttons */
+.collapsible {
+    background-color: rgba(125, 211, 252, 0.1);
+    color: #7dd3fc;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.collapsible:hover {
+    background-color: rgba(125, 211, 252, 0.2);
+}
+
+/* Active state */
+.collapsible.active {
+    background-color: rgba(125, 211, 252, 0.3);
+}
+
+/* Collapsible content */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.content p {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffffcc;
+}
+
+
+.quiz-section {
+    max-width: 550px; /* smaller and fits well */
+    width: 90%; /* responsive on small screens */
+    margin: 40px auto;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border: 2px solid #7dd3fc;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    text-align: left;
+    color: #ffffffcc;
+    font-size: 14px;
+}
+
+.quiz-title {
+    font-size: 20px;
+    color: #7dd3fc;
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.quiz-question {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: rgba(125, 211, 252, 0.05);
+    border-left: 3px solid #7dd3fc;
+    border-radius: 5px;
+}
+
+.quiz-question label {
+    display: block;
+    margin-top: 4px;
+    cursor: pointer;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    background-color: #7dd3fc;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #bae6fd;
+}
+
+#quizResult {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #7dd3fc;
+}
+
+.buttons {
+    display: flex;           /* makes child elements (buttons) sit side by side */
+    justify-content: center; /* centers the buttons horizontally */
+    gap: 20px;               /* space between the buttons */
+    margin-top: 20px;        /* optional spacing from content above */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7dd3fc;
+    color: black;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #bae6fd;
+}
